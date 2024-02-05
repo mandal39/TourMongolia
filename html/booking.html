@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Mongolia Booking</title>
+    <link rel="stylesheet" href="/TourMongolia/style/css/booking.css">
+</head>
+
+<body>
+    <header>
+        <a href="#booking">Tour Mongolia</a>
+        <ul>
+            <nav>
+                <li class="nav-item"><a href="#about">About us</a></li>
+                <li class="nav-item"><a href="#mongolia">Mongolia</a></li>
+                <li class="nav-item"><a href="#tours">Tours</a></li>
+                <li class="nav-item"><a href="#information">Information</a></li>
+            </nav>
+        </ul>
+    </header>
+    <main>
+        <section>
+            <h2>User Registration</h2>
+            <form id="registrationForm">
+              <label for="firstname">Firstname:</label>
+              <input type="text" id="firstname" name="firstname" required>
+
+              <label for="lastname">Lastname:</label>
+              <input type="text" id="lastname" name="lastname" required>
+
+              <label for="dateofbirth">Date of birth:</label>
+              <input type="date" id="dateofbirth" name="dateofbirth" required>
+
+              <label for="gender">Gender:</label>
+              <input type="radio" name="choice" value="male" onclick="showChoice(this.value)"> Male
+              <input type="radio" name="choice" value="female" onclick="showChoice(this.value)"> Female
+              
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required>
+        
+              <label for="password">Password:</label>
+              <input type="password" id="password" name="password" required>
+        
+              <button type="button" onclick="validateRegistration()">Register</button>
+            </form>
+          </section>
+
+          <section>
+            <h2>Agree to Terms and Conditions</h2>
+            <form id="termsForm">
+              <label>
+                <input type="checkbox" id="agree" name="agree" required>
+                I agree to the terms and conditions
+              </label>
+        
+              <button type="button" onclick="validateTerms()">Continue</button>
+            </form>
+          </section>
+
+          <section>
+            <h2>Payment Information</h2>
+            <form id="paymentForm">
+              <label for="cardNumber">Card Number:</label>
+              <input type="text" id="cardNumber" name="cardNumber" required>
+        
+              <label for="expiryDate">Expiry Date:</label>
+              <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YYYY" required>
+        
+              <label for="cvv">CVV:</label>
+              <input type="text" id="cvv" name="cvv" required>
+        
+              <button type="button" onclick="validatePayment()">Make Payment</button>
+            </form>
+          </section>
+
+        <script src="/TourMongolia/scripts/script.js"></script>
+    </main>
+</body>
+</html>
